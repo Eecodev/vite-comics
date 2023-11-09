@@ -18,7 +18,7 @@ import AppFooter from './components/AppFooter.vue';
       },
       data(){
         return{
-
+          
         }
       },
       methods:{
