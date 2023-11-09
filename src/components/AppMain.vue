@@ -7,8 +7,8 @@
         </div>
         <div class="bottom-main">
             <div class="container py-5">
-               <ul class="d-flex justify-content-between">
-                    <li v-for="el in mainImgs" :key="index">
+               <ul class="d-flex justify-content-between flex-nowrap ">
+                    <li v-for="el in mainImgs">
                         <a href="">
                             <img :src="el.img" alt="" class="px-2 w-25 h-75">
                             {{el.text}}
@@ -56,6 +56,9 @@
 </script>
   
 <style lang="scss" scoped>
+    ul{
+        list-style: none;
+    }
     .top-main{
         background-color: #1c1c1c;
     }
