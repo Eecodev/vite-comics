@@ -1,13 +1,15 @@
 <template>
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-between align-items-center ">
+        <div class="container d-flex justify-content-between align-items-center border">
+            <div>
                 <img src="../assets/img/dc-logo.png" alt="Logo">
-                    <ul class="d-flex justify-content-between">
-                        <li class="p-3" v-for="navLink in navLinks">{{ navLink }}</li>
-                    </ul> 
-                </div>
+            </div>
+            <div>
+                <ul class="d-flex justify-content-between">
+                    <li class="p-3" v-for="navLink in navLinks">
+                        <a href="#">{{ navLink }}</a>
+                    </li>
+                </ul>  
             </div>
         </div>
     </header>
@@ -22,16 +24,16 @@
         data(){
             return{
                 navLinks: [
-                    'characters',
-                    'comics',
-                    'movies',
-                    'tv',
-                    'games',
-                    'collectibles',
-                    'videos',
-                    'fans',
-                    'news',
-                    'shop'
+                    'CHARACTERS',
+                    'COMICS',
+                    'MOVIES',
+                    'TV',
+                    'GAMES',
+                    'COLLECTIBLES',
+                    'VIDEOS',
+                    'FANS',
+                    'NEWS',
+                    'SHOP'
                 ],
             }
         },
@@ -45,5 +47,9 @@
 <style lang="scss" scoped>
   ul{
     list-style-type: none;
+    
+    a{
+        text-decoration: none;
+    }
   }
 </style>

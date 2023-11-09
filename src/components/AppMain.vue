@@ -1,5 +1,14 @@
 <template>
-    <main>main</main>
+    <main>
+        <div class="container top-main border">
+            <div class="top-main border-bottom">
+                content goes here
+            </div>
+            <div class="bottom-main">
+    
+            </div>
+        </div>
+    </main>
 </template>
   
 <script>
@@ -10,5 +19,5 @@
 </script>
   
 <style lang="scss" scoped>
-  
+    
 </style>
