@@ -1,14 +1,21 @@
 <template>
     <footer>
         <div class="bg-img">
-            <div class="container top-footer">
-                
+            <div class="container top-footer" v-for="(link, index) in actionLinks" :key = 'index'>
+                <h4>{{ link.title }}</h4>
+                <ul>
+                    <li v-for="(links, index) in link.links" :key="index"><a href="#">{{ link.links }}</a></li>
+                </ul>
             </div> 
         </div>
         <div>
             <div class="container bottom-footer">
-                <button type="button" class="btn btn-secondary btn-lg">SIGN UP</button>
+                <button type="button" class="btn btn-secondary btn-lg mt-3">SIGN UP</button>
             </div> 
+            <div>
+                <span><strong>FOLLOW US</strong></span>
+                <img v-for="img in mediaLogos" :src="mediaLogos.social" alt="">
+            </div>
         </div>
     </footer>
 </template>
@@ -18,7 +25,7 @@
         name: 'AppFooter',
         data(){
             return{
-                actionlinks:[
+                actionLinks:[
                     {
                         title:  'DC COMICS',
                         links: [
@@ -72,8 +79,28 @@
                             ],
                         ]
                     },
-                ]
+                ],
+                mediaLogos: [
+                    {
+                        social: '/public/img/footer-facebook.png',
+                    },
+                    {
+                        social: '/public/img/footer-periscope.png',
+                    },
+                    {
+                        social: '/public/img/footer-pinterest.png',
+                    },
+                    {
+                        social: '/public/img/footer-twitter.png',
+                    },
+                    {
+                        social: '/public/img/footer-youtube.png',
+                    }
+                 ]   
             }
+        },
+        methods:{
+
         }
        
     };
