@@ -82,6 +82,7 @@
   
 <style lang="scss" scoped>
   .bg-img{
+    height: 100px;
     background-image: url('/public/img/footer-bg.jpg');
   }
 </style>

@@ -5,7 +5,7 @@
                 <img src="/public/img/dc-logo.png" alt="Logo">
             </div>
             <div>
-                <ul class="d-flex">
+                <ul class="d-flex flex-wrap">
                     <li class="p-3" v-for="navLink in navLinks">
                         <a href="#">{{ navLink }}</a>
                     </li>
