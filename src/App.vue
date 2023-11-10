@@ -14,7 +14,7 @@ import AppFooter from './components/AppFooter.vue';
     components: {
           AppHeader,
           AppMain,
-          AppFooter
+          AppFooter,
       },
       data(){
         return{

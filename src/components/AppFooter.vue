@@ -3,26 +3,32 @@
         <div class="bg-img">
             <div class="container top-footer" v-for="(link, index) in actionLinks" :key = 'index'>
                 <h4>{{ link.title }}</h4>
-                <ul>
-                    <li v-for="(links, index) in link.links" :key="index"><a href="#">{{ link.links }}</a></li>
-                </ul>
-            </div> 
-        </div>
-        <div>
-            <div class="container bottom-footer">
-                <button type="button" class="btn btn-secondary btn-lg mt-3">SIGN UP</button>
+                <SubMenu :elements="link.links"/>
+                
             </div> 
             <div>
+                <img src="/img/dc-logo-bg.png" alt=""> 
+            </div>
+        </div>
+        <div class=" container bottom-footer d-flex justify-content-between align-items-center">
+
+                <button type="button" class="btn btn-secondary btn-lg">SIGN UP</button>
+
+            <div class="d-flex justify-content-between align-items-center ">
                 <span><strong>FOLLOW US</strong></span>
-                <img v-for="img in mediaLogos" :src="mediaLogos.social" alt="">
+                <img v-for="img in mediaLogos" :src="img.social" alt="">
             </div>
         </div>
     </footer>
 </template>
   
 <script>
+import SubMenu from '../components/SubMenu.vue';
     export default {
         name: 'AppFooter',
+        components:{
+            SubMenu,
+        },
         data(){
             return{
                 actionLinks:[
@@ -110,6 +116,9 @@
 <style lang="scss" scoped>
   .bg-img{
     height: 450px;
-    background-image: url('/public/img/footer-bg.jpg');
+    background-image: url('/img/footer-bg.jpg');
+  }
+  h4{
+    color: white;
   }
 </style>
