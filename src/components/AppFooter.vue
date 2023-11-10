@@ -1,14 +1,18 @@
 <template>
     <footer>
         <div class="bg-img">
-            <div class="container top-footer" v-for="(link, index) in actionLinks" :key = 'index'>
-                <h4>{{ link.title }}</h4>
-                <SubMenu :elements="link.links"/>
-                
-            </div> 
-            <div>
-                <img src="/img/dc-logo-bg.png" alt=""> 
+            <div class="container top-footer d-flex justify-content-between">
+                <div v-for="(link, index) in actionLinks" :key='index'>
+                    <h4>{{ link.title }}</h4>
+                    <ul>
+                        <li v-for="(subLink, subIndex) in link.links" :key="subIndex">{{ subLink }}</li>
+                    </ul> 
+                </div> 
+                <div>
+                    <img src="/img/dc-logo-bg.png" alt=""> 
+                </div>
             </div>
+            
         </div>
         <div class=" container bottom-footer d-flex justify-content-between align-items-center">
 
@@ -23,66 +27,55 @@
 </template>
   
 <script>
-import SubMenu from '../components/SubMenu.vue';
+
     export default {
         name: 'AppFooter',
-        components:{
-            SubMenu,
-        },
         data(){
             return{
                 actionLinks:[
                     {
                         title:  'DC COMICS',
                         links: [
-                            [
-                                'Characters',
-                                'Comics',
-                                'Movies',
-                                'TV',
-                                'Games',
-                                'Videos',
-                                'News' 
-                            ],
+                            'Characters',
+                            'Comics',
+                            'Movies',
+                            'TV',
+                            'Games',
+                            'Videos',
+                            'News' 
                         ]
                     },
                     {
                         title:  'SHOP',
                         links: [
-                            [
-                                'Shop DC',
-                                'Shop DC Collectibles'
-                            ],
+                            'Shop DC',
+                            'Shop DC Collectibles'
                         ]
                     },
                     {
                         title:  'DC',
                         links: [
-                            [
-                                'Terms Of Use',
-                                'Privacy policy (New)',
-                                'Ad Choices',
-                                'Advertising',
-                                'Jobs',
-                                'Subscriptions',
-                                'Talent Workshops',
-                                'CPSC Certifictes',
-                                'Ratings',
-                                'Shop Help',
-                                'Contact Us'
-                            ],
+                            'Terms Of Use',
+                            'Privacy policy (New)',
+                            'Ad Choices',
+                            'Advertising',
+                            'Jobs',
+                            'Subscriptions',
+                            'Talent Workshops',
+                            'CPSC Certifictes',
+                            'Ratings',
+                            'Shop Help',
+                            'Contact Us'
                         ]
                     },
                     {
                         title:  'SITES',
                         links: [
-                            [
-                                'DC',
-                                'MAD Magazine',
-                                'DC Kids',
-                                'DC Universe',
-                                'DC Power Visa' 
-                            ],
+                            'DC',
+                            'MAD Magazine',
+                            'DC Kids',
+                            'DC Universe',
+                            'DC Power Visa' 
                         ]
                     },
                 ],
@@ -115,10 +108,24 @@ import SubMenu from '../components/SubMenu.vue';
   
 <style lang="scss" scoped>
   .bg-img{
-    height: 450px;
+    height: 300px;
     background-image: url('/img/footer-bg.jpg');
   }
   h4{
+    font-size: 0.9rem;
     color: white;
+  }
+  li{
+    color: lightgray;
+    font-size: 0.7rem;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .top-footer img{
+    display: block;
+    width: 300px;
   }
 </style>
