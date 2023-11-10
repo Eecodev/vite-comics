@@ -2,10 +2,10 @@
     <header>
         <div class="container d-flex justify-content-between align-items-center border">
             <div>
-                <img src="../assets/img/dc-logo.png" alt="Logo">
+                <img src="/public/img/dc-logo.png" alt="Logo">
             </div>
             <div>
-                <ul class="d-flex justify-content-between">
+                <ul class="d-flex">
                     <li class="p-3" v-for="navLink in navLinks">
                         <a href="#">{{ navLink }}</a>
                     </li>

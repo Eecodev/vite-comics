@@ -28,23 +28,23 @@
             return{
                 mainImgs:[
                     {
-                        img: "/src/assets/img/buy-comics-digital-comics.png",
+                        img: "/img/buy-comics-digital-comics.png",
                         text: 'DIGITAL COMICS'
                     },
                     {
-                        img: "/src/assets/img/buy-comics-merchandise.png",
+                        img: "/img/buy-comics-merchandise.png",
                         text: 'DC MERCHANDISE'
                     },
                     {
-                        img: "/src/assets/img/buy-comics-shop-locator.png",
+                        img: "/img/buy-comics-shop-locator.png",
                         text: 'SUBSCRIPTION'
                     },
                     {
-                        img: "/src/assets/img/buy-comics-subscriptions.png",
+                        img: "/img/buy-comics-subscriptions.png",
                         text: 'COMIC SHOP LOCATOR'
                     },
                     {
-                        img: "/src/assets/img/buy-dc-power-visa.svg",
+                        img: "/img/buy-dc-power-visa.svg",
                         text: 'DC POWER VISA'
                     },
                     
