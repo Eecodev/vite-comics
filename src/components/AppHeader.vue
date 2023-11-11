@@ -16,6 +16,7 @@
 </template>
   
 <script>
+import { navLinks } from '../data/data';
     export default {
         name: 'AppHeader',
         components: {
@@ -23,18 +24,7 @@
         },
         data(){
             return{
-                navLinks: [
-                    'CHARACTERS',
-                    'COMICS',
-                    'MOVIES',
-                    'TV',
-                    'GAMES',
-                    'COLLECTIBLES',
-                    'VIDEOS',
-                    'FANS',
-                    'NEWS',
-                    'SHOP'
-                ],
+                links: navLinks
             }
         },
         methods: {

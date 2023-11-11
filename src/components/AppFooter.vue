@@ -1,8 +1,8 @@
 <template>
     <footer>
         <div class="bg-img">
-            <div class="container top-footer d-flex justify-content-between">
-                <div v-for="(link, index) in actionLinks" :key='index'>
+            <div class="container top-footer d-flex justify-content-around">
+                <div v-for="(link, index) in actionLinks" :key='index' class="">
                     <h4>{{ link.title }}</h4>
                     <ul>
                         <li v-for="(subLink, subIndex) in link.links" :key="subIndex">{{ subLink }}</li>
@@ -12,11 +12,10 @@
                     <img src="/img/dc-logo-bg.png" alt=""> 
                 </div>
             </div>
-            
         </div>
         <div class=" container bottom-footer d-flex justify-content-between align-items-center">
 
-                <button type="button" class="btn btn-secondary btn-lg">SIGN UP</button>
+            <button type="button" class="btn btn-secondary btn-lg">SIGN UP</button>
 
             <div class="d-flex justify-content-between align-items-center ">
                 <span><strong>FOLLOW US</strong></span>
@@ -27,75 +26,13 @@
 </template>
   
 <script>
-
+import { actionLinks, mediaLogos } from '../data/data';
     export default {
         name: 'AppFooter',
         data(){
             return{
-                actionLinks:[
-                    {
-                        title:  'DC COMICS',
-                        links: [
-                            'Characters',
-                            'Comics',
-                            'Movies',
-                            'TV',
-                            'Games',
-                            'Videos',
-                            'News' 
-                        ]
-                    },
-                    {
-                        title:  'SHOP',
-                        links: [
-                            'Shop DC',
-                            'Shop DC Collectibles'
-                        ]
-                    },
-                    {
-                        title:  'DC',
-                        links: [
-                            'Terms Of Use',
-                            'Privacy policy (New)',
-                            'Ad Choices',
-                            'Advertising',
-                            'Jobs',
-                            'Subscriptions',
-                            'Talent Workshops',
-                            'CPSC Certifictes',
-                            'Ratings',
-                            'Shop Help',
-                            'Contact Us'
-                        ]
-                    },
-                    {
-                        title:  'SITES',
-                        links: [
-                            'DC',
-                            'MAD Magazine',
-                            'DC Kids',
-                            'DC Universe',
-                            'DC Power Visa' 
-                        ]
-                    },
-                ],
-                mediaLogos: [
-                    {
-                        social: '/public/img/footer-facebook.png',
-                    },
-                    {
-                        social: '/public/img/footer-periscope.png',
-                    },
-                    {
-                        social: '/public/img/footer-pinterest.png',
-                    },
-                    {
-                        social: '/public/img/footer-twitter.png',
-                    },
-                    {
-                        social: '/public/img/footer-youtube.png',
-                    }
-                 ]   
+                action: actionLinks,
+                logos: mediaLogos
             }
         },
         methods:{
