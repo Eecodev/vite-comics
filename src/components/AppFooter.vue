@@ -26,7 +26,8 @@
 </template>
   
 <script>
-import { actionLinks, mediaLogos } from '../data/data';
+import { actionLinks } from '../data/data.js';
+import { mediaLogos } from '../data/data.js';
     export default {
         name: 'AppFooter',
         data(){

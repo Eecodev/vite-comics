@@ -22,10 +22,14 @@
 </template>
   
 <script>
-import { cards } from '../data/data';
-import { mainImgs } from '../data/data';
+import AppCards from './AppCards.vue';
+import { cards } from '../data/data.js';
+import { mainImgs } from '../data/data.js';
     export default {
         name: 'AppMain',
+        components:{
+            AppCards,
+        },
         data(){
             return{
                 comics: cards,

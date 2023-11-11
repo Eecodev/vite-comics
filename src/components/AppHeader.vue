@@ -16,7 +16,7 @@
 </template>
   
 <script>
-import { navLinks } from '../data/data';
+import { navLinks } from '../data/data.js';
     export default {
         name: 'AppHeader',
         components: {
